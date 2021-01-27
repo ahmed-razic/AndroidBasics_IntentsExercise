@@ -25,18 +25,13 @@ public class MainActivity extends AppCompatActivity {
 
     public void startWeb(View v) {
         Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.vogella.com/"));
-        if (intent.resolveActivity(getPackageManager()) != null) {
-            startActivity(intent);
-        }
+        startActivity(intent);
     }
 
     public void startMap(View v) {
-
         String geoLocation = "geo:47.6,-122.3?z=11";
         Intent intent = new Intent(Intent.ACTION_VIEW);
         intent.setData(Uri.parse(geoLocation));
-        if (intent.resolveActivity(getPackageManager()) != null) {
-            startActivity(intent);
-        }
+        startActivity(intent);
     }
 }
