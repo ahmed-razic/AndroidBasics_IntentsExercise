@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -13,6 +14,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        MyOnClickListener myListener = new MyOnClickListener();
+
+        Button button4 = findViewById(R.id.button4);
+        Button button5 = findViewById(R.id.button5);
+
+        button4.setOnClickListener(myListener);
+        button5.setOnClickListener(myListener);
     }
 
     public void openActivity2(View v) {

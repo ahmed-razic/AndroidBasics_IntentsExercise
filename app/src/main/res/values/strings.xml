@@ -3,7 +3,8 @@
     <string name="button">Button</string>
     <string name="button2">Button</string>
     <string name="button3">Button</string>
-    <string name="button4">Button</string>
+    <string name="button4">Button 4</string>
     <string name="textview1">TextView</string>
     <string name="textview2">TextView</string>
+    <string name="button5">Button 5</string>
 </resources>
