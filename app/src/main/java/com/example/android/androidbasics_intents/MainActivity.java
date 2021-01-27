@@ -3,6 +3,7 @@ package com.example.android.androidbasics_intents;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 
@@ -20,5 +21,12 @@ public class MainActivity extends AppCompatActivity {
         i.putExtra("value2", "Value for text2");
 
         startActivity(i);
+    }
+
+    public void startWeb(View v) {
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.vogella.com/"));
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
+        }
     }
 }
